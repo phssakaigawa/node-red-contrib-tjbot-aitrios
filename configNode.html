@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    RED.nodes.registerType('aitrios-config', {
+        category: 'config',
+        defaults: {
+            name: { value: "" },
+            baseURL: { value: "", required: true },
+            client_id: { value: "", required: true },
+            client_secret: { value: "", required: true },
+            gcs_okta_domain: { value: "", required: true }
+        },
+        inputs: 0,
+        outputs: 0,
+        icon: "file.png",
+        label: function () {
+            return this.name || "AITRIOS Config";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="aitrios-config">
+    <div class="form-row">
+        <label for="node-input-baseURL"><i class="icon-tag"></i> Base URL</label>
+        <input type="text" id="node-input-baseURL" placeholder="Base URL">
+    </div>
+    <div class="form-row">
+        <label for="node-input-client_id"><i class="icon-tag"></i> Client ID</label>
+        <input type="text" id="node-input-client_id" placeholder="Client ID">
+    </div>
+    <div class="form-row">
+        <label for="node-input-client_secret"><i class="icon-tag"></i> Client Secret</label>
+        <input type="text" id="node-input-client_secret" placeholder="Client Secret">
+    </div>
+    <div class="form-row">
+        <label for="node-input-gcs_okta_domain"><i class="icon-tag"></i> GCS Okta Domain</label>
+        <input type="text" id="node-input-gcs_okta_domain" placeholder="GCS Okta Domain">
+    </div>
+</script>

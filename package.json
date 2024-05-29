@@ -1,0 +1,24 @@
+{
+  "name": "node-red-contrib-tjbot-aitrios",
+  "version": "0.0.1",
+  "description": "",
+  "main": "aitrios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "base-64": "^0.1.0",
+    "qs": "^6.12.1"
+  },
+  "node-red": {
+    "nodes": {
+      "aitrios-config": "configNode.js",
+      "aitrios-get-devices": "getDevices.js",
+      "aitrios-get-image-directories": "getImageDirectories.js",
+      "aitrios-get-inference-results": "getInferenceResults.js"
+    }
+  }
+}
